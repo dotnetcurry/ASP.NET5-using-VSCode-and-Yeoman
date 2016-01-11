@@ -1,0 +1,25 @@
+@model System.Collections.Generic.IEnumerable<MS_Web_App.Models.Employee>
+		<h1>The Employee Details</h1>
+		
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpNo)
+        </th>
+        <th>
+			 @Html.DisplayNameFor(model => model.EmpName)
+		</th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+		<td>
+            @Html.DisplayFor(modelItem => item.EmpNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpName)
+        </td>
+         
+    </tr>
+}
+</table>
